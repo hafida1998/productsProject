@@ -28,7 +28,7 @@ public class ProductWebController {
     @PostMapping("/save_new")
     public String saveNewProduct(@ModelAttribute("product") Product product){
         productController.addProduct(product);
-        return "redirect:/";
+        return "redirect:/";//a comment
     }
     @GetMapping("/update_product/{pId}")
     public String updateProduct(@PathVariable("pId")Long id , Model model){
